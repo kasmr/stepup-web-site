@@ -1,0 +1,23 @@
+{
+  "name": "stepup-web-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "homepage": "https://kasmr.github.io/StepUp-web-site",
+  "dependencies": {
+    "gh-pages": "^2.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kasmr/StepUp-web-site.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kasmr/StepUp-web-site/issues"
+  }
+}
