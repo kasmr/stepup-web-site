@@ -63,6 +63,7 @@ nav h1 {
 
 .logo {
   font-size: 2.5rem;
+  text-align: center;
 }
 
 .navbar .container {
@@ -266,7 +267,7 @@ button:hover {
 
 .section-f {
   text-align: center;
-  background-color:var(--secondary-color);
+  background-color: var(--secondary-color);
   padding: 1rem 0;
   justify-content: center;
   align-items: center;
@@ -441,7 +442,7 @@ input:-webkit-autofill:active {
   width: 100%;
 }
 
-/* Map */  
+/* Map */
 .maps iframe {
   width: 100%;
   height: 100%;
@@ -629,9 +630,57 @@ input:-webkit-autofill:active {
     margin: auto;
   }
   form {
-    width: 80%;
+    width: 60%;
   }
 
   form .submit {
     width: 55px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1220px) {
+  .navbar .container {
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: repeat(2, 1fr);
+    width: 100%;
+    justify-content: center;
+  }
+
+  .logo {
+    text-align: center;
+  }
+
+  .nav button {
+    font-size: 1.3rem;
+  }
+
+  .section-a .container {
+    display: flex;
+    flex-direction: space-around;
+  }
+
+  .section-a h1 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    text-align: center;
+  }
+
+  .section-a p {
+    font-size: 1rem;
+  }
+
+  .section-a img {
+    position: relative;
+    width: 60%;
+  }
+
+  .btn5 {
+    font-size: 1rem;
+    padding: 10px 10px;
+  }
+
+  form {
+    width: 60%;
+  }
 }
