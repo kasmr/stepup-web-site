@@ -1,13 +1,13 @@
-var elementHome = document.getElementById("home");
-var elementAbout = document.getElementById("about");
-var elementServices = document.getElementById("services");
-var elementContacts = document.getElementById("contacts");
-var elementApply = document.getElementById("apply");
-var btn1 = document.querySelector(".btn1");
-var btn2 = document.querySelector(".btn2");
-var btn3 = document.querySelector(".btn3");
-var btn4 = document.querySelector(".btn4");
-var btn5 = document.querySelector(".btn5");
+const elementHome = document.getElementById("home");
+const elementAbout = document.getElementById("about");
+const elementServices = document.getElementById("services");
+const elementContacts = document.getElementById("contacts");
+const elementApply = document.getElementById("apply");
+const btn1 = document.querySelector(".btn1");
+const btn2 = document.querySelector(".btn2");
+const btn3 = document.querySelector(".btn3");
+const btn4 = document.querySelector(".btn4");
+const btn5 = document.querySelector(".btn5");
 
 function scrollToHome() {
   elementHome.scrollIntoView({
