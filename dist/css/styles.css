@@ -132,7 +132,7 @@ button:hover {
 }
 
 .section-a h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: var(--primary-color);
   text-align: center;
   text-transform: uppercase;
@@ -174,12 +174,12 @@ button:hover {
 }
 
 .section-b-inner h2 {
-  font-size: 3.5rem;
+  font-size: 2rem;
   margin: 1rem 0;
 }
 
 .section-b-inner p {
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin: 1.5rem 5rem;
 }
 
@@ -202,15 +202,17 @@ button:hover {
 .section-c h1 {
   padding-bottom: 1rem;
   text-transform: uppercase;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .section-c h2 {
   text-align: center;
+  font-size: 1.5rem;
 }
 
 .section-c p {
   padding: 1.5rem 3rem;
+  font-size: 1rem;
 }
 
 .section-c-inner {
@@ -232,7 +234,6 @@ button:hover {
 .main-img img {
   border: 1px solid var(--primary-color);
   width: 100%;
-  height: 1000%;
 }
 
 .imgs {
@@ -240,28 +241,59 @@ button:hover {
   grid-template-columns: repeat(3, 1fr);
   margin: auto;
   border-bottom: 1px solid var(--secondary-color);
+  cursor: pointer;
 }
 
 /* section-e */
 
 .section-e {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
+  padding: 1rem 0;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
   text-align: center;
-}
-
-.section-e .container {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-gap: 2rem;
-  padding-bottom: 1rem;
-  padding-top: 1rem;
+  justify-content: center;
 }
 
 .section-e h1 {
-  padding-top: 1rem;
   text-transform: uppercase;
-  font-size: 3rem;
+  font-size: 2rem;
+  margin: 1rem;
+}
+
+.section-e p {
+  font-size: 1.1rem;
+}
+
+.accordion {
+  width: 100%;
+  font-size: 1.3rem;
+  margin: 1rem 0;
+  border: 3px solid var(--primary-color);
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  margin-bottom: 0;
+}
+
+.active,
+.accordion:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.panel {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
+}
+.section-e i {
+  position: absolute;
+  font-size: 1.5rem;
+  right: 15px;
+  top: 30%;
+}
+
+.section-e i:hover {
+  color: var(--secondary-color);
 }
 
 /* section-f */
@@ -313,6 +345,7 @@ button:hover {
 
 i:hover {
   color: var(--overlay-color);
+  transition: color 0.3s linear;
 }
 
 /* footer */
@@ -325,7 +358,7 @@ footer {
 
 footer h1 {
   color: var(--primary-color);
-  font-size: 3rem;
+  font-size: 2rem;
   text-transform: uppercase;
 }
 
@@ -455,7 +488,7 @@ input:-webkit-autofill:active {
 }
 
 .maps {
-  height: 400px;
+  height: 450px;
   padding: 0;
   align-content: center;
   align-self: center;

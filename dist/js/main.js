@@ -10,8 +10,23 @@ const btn4 = document.querySelector(".btn4");
 const btn5 = document.querySelector(".btn5");
 const current = document.getElementById("current");
 const imgs = document.querySelectorAll(".imgs img");
+const acc = document.querySelectorAll(".accordion");
 const opacity = 0.4;
 
+//Accordion slide out
+acc.forEach(accordion => accordion.addEventListener("click", accClick));
+
+function accClick(e) {
+  this.classList.toggle("active");
+  const panel = this.nextElementSibling;
+  if (panel.style.maxHeight) {
+    panel.style.maxHeight = null;
+  } else {
+    panel.style.maxHeight = panel.scrollHeight + "px";
+  }
+}
+
+//Gallery
 imgs.forEach(img => img.addEventListener("click", imgClick));
 
 function imgClick(e) {
@@ -22,6 +37,7 @@ function imgClick(e) {
   setTimeout(() => current.classList.remove("fade-in"), 500);
 }
 
+//Scroll
 function scrollToHome() {
   elementHome.scrollIntoView({
     behavior: "smooth",
