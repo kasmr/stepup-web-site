@@ -8,6 +8,19 @@ const btn2 = document.querySelector(".btn2");
 const btn3 = document.querySelector(".btn3");
 const btn4 = document.querySelector(".btn4");
 const btn5 = document.querySelector(".btn5");
+const current = document.getElementById("current");
+const imgs = document.querySelectorAll(".imgs img");
+const opacity = 0.4;
+
+imgs.forEach(img => img.addEventListener("click", imgClick));
+
+function imgClick(e) {
+  current.src = e.target.src;
+  imgs.forEach(img => (img.style.opacity = 1));
+  current.classList.add("fade-in");
+  e.target.style.opacity = opacity;
+  setTimeout(() => current.classList.remove("fade-in"), 500);
+}
 
 function scrollToHome() {
   elementHome.scrollIntoView({
