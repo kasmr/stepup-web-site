@@ -149,7 +149,7 @@ button:hover {
   position: relative;
   background-image: url('/dist/img/showcase-2.jpg');
   background-size: cover;
-  background-position: center top left;
+  background-position: center;
   background-repeat: no-repeat;
   height: 550px;
   margin-top: -2px;
@@ -584,6 +584,7 @@ input:-webkit-autofill:active {
 
   .section-b {
     height: 400px;
+    background-position: center right;
   }
 
   .section-b-inner h3 {
