@@ -23,6 +23,10 @@ function accClick(e) {
     panel.style.maxHeight = null;
   } else {
     panel.style.maxHeight = panel.scrollHeight + 'px';
+    panel.style.backgroundColor = '#e0e0e0';
+    panel.style.borderRadius = '0 0 10px 10px';
+    panel.style.paddingTop = '1rem';
+    panel.style.marginTop = '-1rem';
   }
 }
 

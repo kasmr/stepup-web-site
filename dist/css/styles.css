@@ -147,7 +147,7 @@ button:hover {
 
 .section-b {
   position: relative;
-  background-image: url('/dist/img/showcase-3.jpg');
+  background-image: url('/dist/img/showcase-2.jpg');
   background-size: cover;
   background-position: center top left;
   background-repeat: no-repeat;
@@ -269,15 +269,15 @@ button:hover {
   font-size: 1.3rem;
   margin: 1rem 0;
   border: 3px solid var(--primary-color);
-  background-color: transparent;
-  color: var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
   margin-bottom: 0;
 }
 
 .active,
 .accordion:hover {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 .panel {
@@ -291,6 +291,7 @@ button:hover {
   margin: auto;
   margin-top: 1rem;
   width: 50%;
+  padding-bottom: 2rem;
 }
 
 .section-e i {
@@ -656,21 +657,6 @@ input:-webkit-autofill:active {
     font-size: 0.8rem;
   }
 
-  .accordion {
-    font-size: 0.8rem;
-    font-weight: bold;
-    margin: 0;
-  }
-
-  .panel p {
-    width: 100%;
-    margin-top: 0;
-  }
-
-  button {
-    padding: 0.8rem;
-  }
-
   .section-e i {
     right: 5px;
     top: 40%;
@@ -678,7 +664,22 @@ input:-webkit-autofill:active {
   }
 
   .section-e .container {
-    grid-gap: 0.8rem;
+    grid-gap: 0;
+  }
+
+  .accordion {
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+
+  .panel p {
+    width: 80%;
+    margin-top: 1rem;
+    padding-bottom: 1.5rem;
+  }
+
+  button {
+    padding: 0.8rem;
   }
 
   .whatsapp i {
@@ -761,7 +762,9 @@ input:-webkit-autofill:active {
 
   .section-a img {
     position: relative;
-    width: 70%;
+    width: 50%;
+    margin-left: 2rem;
+    bottom: -3.6rem;
   }
 
   .accordion {
