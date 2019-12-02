@@ -112,10 +112,7 @@ button:hover {
 }
 
 .btn5:hover {
-  color: var(--primary-color);
-  background-color: var(--secondary-color);
-  border-left: 1px solid var(--primary-color);
-  border-right: 1px solid var(--primary-color);
+  background-color: var(--overlay-color);
 }
 
 /* section a */
@@ -301,10 +298,6 @@ button:hover {
   top: 30%;
 }
 
-.section-e i:hover {
-  color: var(--secondary-color);
-}
-
 /* section-f */
 
 .section-f {
@@ -322,6 +315,7 @@ button:hover {
 .section-f-inner {
   display: flex;
   justify-content: center;
+  margin: 2rem;
 }
 
 .section-f h3 {
@@ -338,23 +332,22 @@ button:hover {
 }
 
 .section-f-inner p {
-  margin: 0 1rem;
+  margin: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  border-bottom: var(--secondary-color) 3px solid;
 }
 
-.whatsapp i {
-  color: green;
-  font-size: 4rem;
+.section-f-inner p:hover {
+  border-bottom: var(--primary-color) 3px solid;
+  transition: border 0.5s linear;
 }
 
-.instagram i {
+.section-f-inner i {
+  padding-top: 1rem;
   color: var(--primary-color);
-  font-size: 4rem;
+  font-size: 5rem;
 }
-
-/* .twitter i {
-  color: rgb(50, 137, 218);
-  font-size: 4rem;
-} */
 
 i:hover {
   color: var(--overlay-color);
@@ -379,12 +372,26 @@ footer p {
   color: var(--primary-color);
 }
 
+footer .name {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+footer .btn1 {
+  position: relative;
+  align-self: center;
+  left: 60%;
+  font-size: 4rem;
+  cursor: pointer;
+}
+
 .copyright {
   background-color: var(--primary-color);
   color: var(--secondary-color);
   font-size: 0.7rem;
   text-transform: uppercase;
-  margin-top: 2rem;
+  /* margin-top: 1rem; */
 }
 
 .copyright a {
@@ -527,7 +534,7 @@ input:-webkit-autofill:active {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     justify-content: center;
-    margin-top: 3.5rem;
+    margin-top: 2rem;
   }
 
   .navbar .nav {
@@ -538,13 +545,13 @@ input:-webkit-autofill:active {
     background-color: var(--primary-color);
     color: var(--secondary-color);
     z-index: 1;
-    height: 7vh;
+    height: 5vh;
   }
 
   .nav button {
     font-size: 0.8rem;
-    padding: 5px 3px;
-    margin: 4px 4px;
+    padding: 5px 1px;
+    margin: 4px 10px;
     color: var(--secondary-color);
     background-color: var(--primary-color);
   }
@@ -653,15 +660,24 @@ input:-webkit-autofill:active {
     max-width: 65%;
   }
 
+  .section-f-inner {
+    margin: 0;
+    flex-direction: row;
+  }
+
   .section-f-inner p {
-    margin: 10px;
-    font-size: 0.8rem;
+    margin: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .section-f-inner i {
+    margin-bottom: 1.5rem;
+    padding: 0;
+    font-size: 3rem;
   }
 
   .section-e i {
-    right: 5px;
-    top: 40%;
-    font-size: 1rem;
+    display: none;
   }
 
   .section-e .container {
@@ -670,7 +686,7 @@ input:-webkit-autofill:active {
 
   .accordion {
     font-size: 0.8rem;
-    font-weight: bold;
+    font-weight: normal;
   }
 
   .panel p {
@@ -681,18 +697,6 @@ input:-webkit-autofill:active {
 
   button {
     padding: 0.8rem;
-  }
-
-  .whatsapp i {
-    font-size: 3rem;
-  }
-
-  .instagram i {
-    font-size: 3rem;
-  }
-
-  .twitter i {
-    font-size: 3rem;
   }
 
   .maps h1 {
@@ -720,8 +724,25 @@ input:-webkit-autofill:active {
     max-width: 80%;
     margin: auto;
   }
+
+  footer .name {
+    margin: 0;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  footer .btn1 {
+    position: relative;
+    left: 0;
+    justify-content: center;
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+
   form {
     width: 80%;
+    margin: auto;
+    margin-top: 1rem;
   }
 
   form .submit {
@@ -779,6 +800,14 @@ input:-webkit-autofill:active {
   .btn5 {
     font-size: 1rem;
     padding: 10px 10px;
+  }
+
+  footer .btn1 {
+    position: relative;
+    align-self: center;
+    left: 75%;
+    font-size: 4rem;
+    cursor: pointer;
   }
 
   form {
