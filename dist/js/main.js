@@ -4,15 +4,41 @@ const elementServices = document.getElementById('services');
 const elementContacts = document.getElementById('contacts');
 const elementApply = document.getElementById('apply');
 const btn1 = document.querySelector('.btn1');
-const btn2 = document.querySelector('.btn2');
-const btn3 = document.querySelector('.btn3');
-const btn4 = document.querySelector('.btn4');
+const link2 = document.querySelector('.link2');
+const link3 = document.querySelector('.link3');
+const link4 = document.querySelector('.link4');
 const btn5 = document.querySelector('.btn5');
 const current = document.getElementById('current');
 const imgs = document.querySelectorAll('.imgs img');
 const acc = document.querySelectorAll('.accordion');
+
 const opacity = 0.4;
 
+//Burger menu
+const navSlide = () => {
+  const burger = document.querySelector('.burger');
+  const nav = document.querySelector('.nav-links');
+  const navLinks = document.querySelectorAll('.nav-links li');
+
+  //Toggle nav
+  burger.addEventListener('click', () => {
+    nav.classList.toggle('nav-links-active');
+    //Animate links
+    navLinks.forEach((link, index) => {
+      if (link.style.animation) {
+        link.style.animation = '';
+      } else {
+        link.style.animation = `navLinksFade 0.5s ease forwards ${index / 7 +
+          0.3}s`;
+      }
+    });
+
+    //Animate burger
+    burger.classList.toggle('toggle');
+  });
+};
+
+navSlide();
 //Accordion slide out
 acc.forEach(accordion => accordion.addEventListener('click', accClick));
 
@@ -86,7 +112,7 @@ function scrollToApply() {
 }
 
 btn1.addEventListener('click', scrollToHome);
-btn2.addEventListener('click', scrollToAbout);
-btn3.addEventListener('click', scrollToServices);
-btn4.addEventListener('click', scrollToContacts);
+link2.addEventListener('click', scrollToAbout);
+link3.addEventListener('click', scrollToServices);
+link4.addEventListener('click', scrollToContacts);
 btn5.addEventListener('click', scrollToApply);

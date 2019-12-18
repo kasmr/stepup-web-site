@@ -52,30 +52,56 @@ a {
 /* Navbar */
 
 nav {
-  font-size: 1.3rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-nav h1 {
-  align-self: center;
-}
-
-.logo {
-  font-size: 2.5rem;
-  text-align: center;
-}
-
-.navbar .container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.navbar .nav {
+  position: absolute;
+  width: 100%;
   display: flex;
-  justify-self: flex-end;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
+  padding-top: 2rem;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+}
+
+.nav-links a {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem 0.8rem;
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-family: 'Roboto';
+  position: relative;
+  margin: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.nav-links a:hover {
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  transition: linear 0.25s;
+}
+
+.burger {
+  display: none;
+  position: fixed;
+  font-size: 2.3rem;
+  top: 10px;
+  right: 10px;
+  z-index: 3;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: #f63754;
+  transition: all 0.3s ease;
 }
 
 button {
@@ -370,6 +396,7 @@ button:hover {
 i:hover {
   color: var(--overlay-color);
   transition: color 0.3s linear;
+  animation: scaleUp 0.5s forwards;
 }
 
 /* footer */
@@ -535,55 +562,99 @@ input:-webkit-autofill:active {
 }
 
 /* fade in animation */
-@keyframes fadeIn {
+@keyframes navLinksFade {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
   to {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 0.5s ease-in 1 forwards;
+@keyframes scaleUp {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.3);
+  }
 }
+
+/* Media */
 
 @media screen and (max-width: 768px) {
-  /* Это экспериментальный навбар */
-  .navbar .container {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    justify-content: center;
-    margin-top: 2rem;
+  nav {
+    position: relative;
+    height: 20vh;
+    margin: 0;
+    padding: 0;
   }
 
-  .navbar .nav {
+  .nav-links {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     background-color: var(--primary-color);
-    color: var(--secondary-color);
-    z-index: 1;
-    height: 5vh;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 60vw;
+    z-index: 2;
+    opacity: 0.95;
+    transform: translateY(-100%);
+    transition: transform ease-in 0.5s;
   }
 
-  .nav button {
-    font-size: 0.8rem;
-    padding: 5px 1px;
-    margin: 4px 10px;
-    color: var(--secondary-color);
-    background-color: var(--primary-color);
+  .nav-links-active {
+    transform: translateY(0);
+    transition: transform ease-in 0.5s;
   }
-  /* Его конец */
+
+  .nav-links li {
+    opacity: 0;
+  }
+
+  .nav-links a {
+    margin: auto;
+    padding: 0;
+    background-color: transparent;
+    color: var(--secondary-color);
+    margin: 0;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-6px, 6px);
+  }
+  .toggle .line2 {
+    opacity: 0;
+  }
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -5px);
+  }
 
   .logo {
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-align: center;
     text-transform: uppercase;
+  }
+
+  .section-a {
+    height: auto;
   }
 
   .section-a .container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    grid-gap: 0;
+    height: auto;
   }
 
   .section-a h1 {
@@ -594,17 +665,21 @@ input:-webkit-autofill:active {
 
   .section-a p {
     font-size: 0.8rem;
+    padding: 0;
+    margin: 0;
   }
 
   .section-a img {
     position: relative;
-    width: 90%;
-    margin: auto;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: -2rem;
   }
 
   .btn5 {
     font-size: 1rem;
     padding: 10px 10px;
+    margin: 2rem;
   }
 
   .section-b {
@@ -760,6 +835,11 @@ input:-webkit-autofill:active {
     justify-content: center;
     font-size: 2rem;
     margin-top: 1rem;
+    color: #f63754;
+  }
+
+  .fas.fa-angle-double-up {
+    color: #f63754;
   }
 
   form {
