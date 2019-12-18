@@ -118,6 +118,7 @@ button:hover {
 /* section a */
 
 .section-a {
+  height: 90vh;
   margin: 0 1rem;
 }
 
@@ -126,6 +127,7 @@ button:hover {
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
 .section-a h1 {
@@ -137,7 +139,7 @@ button:hover {
 
 .section-a p {
   text-align: center;
-  margin-top: 0.5rem;
+  margin: 2rem;
 }
 
 /* section b */
@@ -148,7 +150,7 @@ button:hover {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 550px;
+  height: 100vh;
   margin-top: -2px;
 }
 
@@ -249,6 +251,16 @@ button:hover {
   color: var(--primary-color);
   text-align: center;
   justify-content: center;
+  height: auto;
+}
+
+.section-e-heading {
+  margin: 2.5rem auto;
+  width: 50%;
+}
+
+.section-e .container {
+  height: 100%;
 }
 
 .section-e h1 {
@@ -258,17 +270,22 @@ button:hover {
 }
 
 .section-e p {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
+  line-height: 1.8;
 }
 
 .accordion {
   width: 100%;
   font-size: 1.3rem;
-  margin: 1rem 0;
+  margin: 2rem 0;
   border: 3px solid var(--primary-color);
   background-color: var(--primary-color);
   color: var(--secondary-color);
   margin-bottom: 0;
+}
+
+.panel:last-child {
+  margin-bottom: 10px;
 }
 
 .active,
@@ -281,6 +298,7 @@ button:hover {
   overflow: hidden;
   max-height: 0;
   transition: max-height 0.5s ease-out;
+  box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.6);
 }
 
 .panel p {
@@ -298,7 +316,7 @@ button:hover {
   top: 30%;
 }
 
-/* section-f */
+/* section-f contacts */
 
 .section-f {
   text-align: center;
@@ -633,6 +651,11 @@ input:-webkit-autofill:active {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 2rem;
+  }
+
+  .section-e-heading {
+    margin: 0.5rem auto;
+    width: 100%;
   }
 
   .section-e h1 {
